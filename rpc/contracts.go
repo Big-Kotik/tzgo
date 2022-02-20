@@ -42,7 +42,7 @@ type ContractInfo struct {
 }
 
 func (i ContractInfo) IsRevealed() bool {
-	return i.Manager == ""
+	return i.Manager != ""
 }
 
 func (i ContractInfo) ManagerKey() tezos.Key {
