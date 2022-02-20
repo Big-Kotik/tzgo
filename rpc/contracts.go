@@ -42,8 +42,7 @@ type ContractInfo struct {
 }
 
 func (i ContractInfo) IsRevealed() bool {
-	_, ok := tezos.ParseKeyType(i.Manager)
-	return ok
+	return i.Manager == ""
 }
 
 func (i ContractInfo) ManagerKey() tezos.Key {
